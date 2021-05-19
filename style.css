@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: blueviolet;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+table {
+  width: 70%;
+  min-width: 300px;
+  min-height: 258px;
+  margin: 30px auto;
+  text-align: center;
+  border: solid;
+  border-color: aliceblue;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: aliceblue;
+}
+
+.circle-blue {
+  background-image: url(./circle_red.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.circle-red {
+  background-image: url(./circle_blue.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+td {
+  background-color: rgb(228, 228, 228);
+}
