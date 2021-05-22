@@ -6,15 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	+ ocupied
 
 	CSS id's used:
-	+ player-turn-display
+	+ player-turn
+	+ display
 	*/
 
-	const playerTurnDisplay = document.querySelector('#player-turn-display')
+	const playerTurnDisplay = document.querySelector('#player-turn')
+	const display = document.querySelector('#display')
 	const tokenCells = document.querySelectorAll('td')
 
 	let playerTurn = 1
+	const player1 = 'player1'
+	const player2 = 'player2'
+	const ocupied = 'ocupied'
 
-	const winningArrays = [
+	const winningCases = [
 		[0, 1, 2, 3],
 		[41, 40, 39, 38],
 		[7, 8, 9, 10],
@@ -86,18 +91,41 @@ document.addEventListener('DOMContentLoaded', () => {
 		[13, 20, 27, 34],
 	]
 
-	function newGame() {
-		tokenCells.forEach((tokenCell) => {
-			tokenCell.classList.remove('player1')
-			tokenCell.classList.remove('player2')
-		})
+	// function newGame() {
+	// 	tokenCells.forEach((tokenCell) => {
+	// 		tokenCell.classList.remove('player1')
+	// 		tokenCell.classList.remove('player2')
+	// 	})
+	// }
+
+	function winConditions() {
+
+		for (let condition = 0; condition < winningCases.length; condition++) {
+			const tokenCell1 = tokenCells[winningCases[condition][0]]
+			const tokenCell2 = tokenCells[winningCases[condition][1]]
+			const tokenCell3 = tokenCells[winningCases[condition][2]]
+			const tokenCell4 = tokenCells[winningCases[condition][3]]
+
+			if (
+				tokenCell1.classList.contains(player1) &&
+				tokenCell2.classList.contains(player1) &&
+				tokenCell3.classList.contains(player1) &&
+				tokenCell4.classList.contains(player1)
+			)
+			//{ return alert('Player 1 Won!') }
+			{ return display.innerHTML = 'Player 1 Won!' }
+
+			if (
+				tokenCell1.classList.contains(player2) &&
+				tokenCell2.classList.contains(player2) &&
+				tokenCell3.classList.contains(player2) &&
+				tokenCell4.classList.contains(player2)
+			)
+			//{ return alert('Player 2 Won!') }
+			{ return display.innerHTML = 'Player 2 Won!' }
+		}
 	}
 
-	function winConditions() { }
-
-	function beginGame() {
-
-	}
 
 	function playerTurnManagement() {
 
@@ -106,17 +134,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			tokenCells[i].onclick = () => {
 
 				if (
-					tokenCells[i + 7].classList.contains('ocupied') &&
-					!tokenCells[i].classList.contains('ocupied')
+					tokenCells[i + 7].classList.contains(ocupied) &&
+					!tokenCells[i].classList.contains(ocupied)
 				) {
 					if (playerTurn === 1) {
-						tokenCells[i].classList.add('ocupied')
-						tokenCells[i].classList.add('player1')
+						tokenCells[i].classList.add(ocupied)
+						tokenCells[i].classList.add(player1)
 						playerTurn = 2
 						playerTurnDisplay.innerHTML = playerTurn
 					} else if (playerTurn === 2) {
-						tokenCells[i].classList.add('ocupied')
-						tokenCells[i].classList.add('player2')
+						tokenCells[i].classList.add(ocupied)
+						tokenCells[i].classList.add(player2)
 						playerTurn = 1
 						playerTurnDisplay.innerHTML = playerTurn
 					}
@@ -127,6 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//newGame()
-	beginGame()
 	playerTurnManagement()
 })
