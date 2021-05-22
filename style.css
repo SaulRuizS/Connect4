@@ -38,13 +38,13 @@ table {
   background-color: aliceblue;
 }
 
-.circle-blue {
+.player2 {
   background-image: url(./circle_red.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.circle-red {
+.player1 {
   background-image: url(./circle_blue.svg);
   background-repeat: no-repeat;
   background-size: cover;
