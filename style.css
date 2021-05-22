@@ -60,3 +60,22 @@ td {
 	background-color: transparent;
 	height: 0;
 }
+
+.restart-button {
+	position: relative;
+	left: calc(50% - 59px);
+	padding: 20px;
+	color: rgb(233, 233, 233);
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: 500;
+	background-color: rgb(120, 55, 180);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.restart-button:hover {
+	background-color: rgb(98, 36, 156);
+}
