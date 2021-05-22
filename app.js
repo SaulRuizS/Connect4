@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 	}
 
-	newGame()
+	//newGame()
 	beginGame()
 	playerTurnManagement()
 })
