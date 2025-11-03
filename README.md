@@ -1,5 +1,5 @@
 # Connect4
-This is a basic connect 4 game made with HTML, CSS and vanilla JavaScript.
+This is a basic connect 4 game built with HTML, CSS and vanilla JavaScript.
 
 <img width="367" alt="connect4-resized" src="https://github.com/SaulRuizS/Connect4/assets/81715186/f5a24887-bd03-4de8-ac3a-7b556d6812ba">
 
