@@ -24,7 +24,7 @@ If you want to continue playing, just click on the restart button.
 
 ## Contributing
 
-Feel free to contribute in any way.
+Feel free to contribute.
 
 ## Credits
 
